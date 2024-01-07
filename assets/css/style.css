@@ -3015,7 +3015,8 @@ textarea.form-control {
 }
 
 .footer-widget__logo {
-  margin: 40px 0 10px;
+  margin: 0px 0px 10px;
+  width: 70%;
 }
 @media only screen and (max-width: 767px) {
   .footer-widget__logo {
@@ -3024,7 +3025,7 @@ textarea.form-control {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 575px) {
   .footer-widget__logo img {
-    width: 160px;
+    width: 90px;
   }
 }
 .footer-widget__social {
