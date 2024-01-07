@@ -1,0 +1,124 @@
+/*----------------------------------------*/
+/*  03 - 19 Event CSS
+/*----------------------------------------*/
+.event{
+    &_image{
+        margin: 0% -27% 0% 0%;
+        @media #{$large-mobile} {
+            margin: 0px; 
+        }
+    }
+    &_content{
+        background-color: white;
+        box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+        padding: 70px;
+        text-align: center;
+        @media #{$laptop-device} {
+            padding: 60px; 
+        }
+        @media #{$desktop-device} {
+            padding: 40px; 
+        }
+        @media #{$tablet-device} {
+            padding: 30px; 
+        }
+        @media #{$large-mobile} {
+            padding: 40px; 
+        }
+        @media #{$extra-small-mobile} {
+            padding: 30px; 
+        }
+    }
+    &_subtitle{
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $font-01;
+        color: $global-color-01;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+        display: block;
+        line-height: 1;
+        @media #{$desktop-device} {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        @media #{$tablet-device} {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        @media #{$large-mobile} {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    }
+    &_title{
+        font-family: $font-01;
+        font-size: 72px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+        color: $global-color-09;
+        display: block;
+        margin-bottom: 25px;
+        @media #{$laptop-device} {
+            font-size: 60px;
+        }
+        @media #{$desktop-device} {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        @media #{$tablet-device} {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        @media #{$large-mobile} {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        @media #{$extra-small-mobile} {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    }
+    &_discount{
+        font-family: $font-01;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+        display: block;
+        margin-bottom: 40px;
+        color: $global-color-05;
+        @media #{$desktop-device} {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        @media #{$tablet-device} {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        @media #{$large-mobile} {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+    &_text{
+        color: $global-color-01;
+        max-width: 460px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        @media #{$desktop-device} {
+            margin-bottom: 20px;
+        }
+        @media #{$tablet-device} {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        @media #{$large-mobile} {
+            margin-bottom: 20px;
+        }
+    }
+}

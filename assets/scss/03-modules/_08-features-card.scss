@@ -1,0 +1,158 @@
+/*----------------------------------------*/
+/*  03 - 08 Features Card CSS
+/*----------------------------------------*/
+
+// Features Card Wrapper 
+.features-card-wrapper{
+    padding: 35px;
+    margin-top: -290px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$tablet-device, $large-mobile}{
+        margin-top: -180px;
+        padding: 20px;
+    }
+}
+
+// Features Card Item 
+.features-card-item{
+    box-shadow: 0 0 10px 0 rgba($black, 0.05);
+
+    &__image{
+        & a{
+            display: block;
+            overflow: hidden;
+        }
+        & img{
+            width: 100%;
+            transition: $transition-base;
+        }
+    }
+    &__content{}
+    &__inner{
+        padding: 30px;
+
+        @media #{$tablet-device, $small-mobile}{
+            padding: 15px;
+        }
+    }
+    &__title{
+        padding-top: 5px;
+        padding-bottom: 50px;
+        text-transform: uppercase;
+        position: relative;
+
+        @media #{$tablet-device, $small-mobile}{
+            font-size: 22px;
+            padding-bottom: 30px;
+        }
+
+        &::after{
+            position: absolute;
+            content: '';
+            background-image: url(../images/icon/icon-1.svg);
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 60px;
+            height: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+
+            @media #{$tablet-device, $small-mobile}{
+                bottom: 10px;
+                width: 40px;
+            }
+        }
+    }
+    & p{
+        font-size: 14px;
+    }
+    &__btn{
+        height: 60px;
+        line-height: 60px;
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+        display: block;
+        width: 100%;
+
+        @media #{$tablet-device, $small-mobile}{
+            font-size: 14px;
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        &.btn-color-01{
+            background-color: #4F1818;
+        }
+        &.btn-color-02{
+            background-color: #830E0E;
+        }
+        &.btn-color-03{
+            background-color: #80430C;
+        }
+        
+        &:hover{
+            color: $white;
+            background-color: $secondary;
+        }
+    }
+
+    &:hover{
+        .features-card-item{
+            &__image{
+                & img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+// Features Card Item 02
+.features-card-item-02{
+    &__icon{
+        & .svg-icon{
+            width: 121px;
+            height: 121px;
+            line-height: 1;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & svg{
+            width: 1em;
+            height: 1em;
+        }
+    }
+    &__content{
+        margin-top: 35px;
+        max-width: 260px;
+    }
+    &__title{
+        font-family: $font-family-base;
+        font-size: 22px;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: -1px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device}{
+            font-size: 18px;
+        }
+    }
+    & p{
+        margin-top: 12px;
+        font-size: 14px;
+        color: $global-color-01;
+    }
+}
+
+

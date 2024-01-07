@@ -1,0 +1,235 @@
+/*----------------------------------------*/
+/*  02 - 01 - 04 Offcanvas Menu CSS
+/*----------------------------------------*/
+
+// Offcanvas Menu 
+.offcanvas-menu{
+    width: 320px;
+    z-index: 999;
+    & .offcanvas-header{
+
+        & .btn-close{
+            padding: 0;
+            margin: 0;
+            font-size: 30px;
+            box-shadow: none;
+            line-height: 1;
+            opacity: 1;
+        }
+    }
+
+    & .offcanvas-body {
+        padding: 0 20px 20px;
+        overflow-y: auto;
+    }
+
+    & ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+// Mobile Primary Menu
+.mobile-primary-menu {
+    & li {
+        position: relative !important;       
+        
+        & > .menu-item-link{
+            color: $white;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        &.menu-item-has-children{
+            
+            & .mobile-menu-expand{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                text-align: center;
+                transition: $transition-base;
+
+                &::after{
+                    content: '\ea10';
+                    color: $white;
+                    display: inline-block;
+                    font: normal normal normal 14px/1 LaStudioIcons;
+                    speak: none;
+                    text-transform: none;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+
+            &.active-expand{
+                & > .mobile-menu-expand{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        & .banner-menu-content-wrap{
+            display: none;
+        }
+    }
+    & .sub-menu {
+        background-color: $white;
+        box-shadow: 2px 2px 8px rgba($black, 0.1);
+        z-index: 99;
+        width: 100%;
+        padding: 15px;
+
+        & li{
+            padding: 0;
+
+            &.menu-item-has-children{
+                & .mobile-menu-expand{
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;    
+                    
+                    &::after{
+                        color: $theme-body-font-color;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            & .sub-item-link{
+                padding: 5px 10px;
+                color: $theme-body-font-color;
+                font-weight: 400;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & span{
+                    position: relative;
+
+                    &::before{
+                        content: "";
+                        border-left: 0 solid;
+                        transition: padding 0.2s,border-color 0.2s;
+                        color: $primary;
+                    }
+                }
+            }
+            &:hover{
+                & > .sub-item-link{
+                    color: $primary;
+    
+                    & span{                        
+                        &::before{
+                            border-left-width: 4px;
+                            padding-left: 13px;
+                        }
+                    }
+                }
+            }
+
+            & .sub-menu{
+                padding: 5px 16px 0;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+// Mobile Menu two 
+.mobile-menu-two{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @media #{$small-mobile} {
+        width: 330px;
+    }
+    & li{
+        position: relative;
+        width: 100%;    
+        & > .menu-item-link{
+            font-size: 36px;
+            font-family: $font-01;
+            text-transform: uppercase;
+            font-weight: 700;
+            @media #{$large-mobile} {
+                font-size: 30px;
+            }
+            @media #{$extra-small-mobile} {
+                font-size: 24px;
+            }
+        }
+        &.menu-item-has-children{
+            
+            & > .mobile-menu-expand{
+                top: 18px;
+            }
+
+            &.active-expand{
+                & > .mobile-menu-expand{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    & .sub-menu{
+        & li{
+            &.menu-item-has-children{
+                & .mobile-menu-expand{
+                    top: 0px;
+                }
+            }
+        }
+    }
+}
+// Offcanvas Menu Two
+.offcanvas-menu-two{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index: 999;
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: $secondary;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: .4;
+    }
+    & .offcanvas-body {
+        z-index: 999;
+    }
+    & .offcanvas-header{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        @media #{$large-mobile} {
+            top: 0%;
+        }
+    }
+    & .btn-close{
+        color: white;
+        font-size: 30px;
+        opacity: 1;
+        z-index: 9999;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

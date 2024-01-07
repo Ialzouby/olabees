@@ -1,0 +1,85 @@
+/*----------------------------------------*/
+/*  03 - 23 Story CSS
+/*----------------------------------------*/
+.story-bg{
+    padding: 145px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    @media #{$desktop-device}{
+        padding: 100px 0;
+    }
+    @media #{$tablet-device}{
+        padding: 80px 0;
+    }
+    @media #{$large-mobile}{
+        padding: 60px 0;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: $secondary;
+        opacity: 0.2;
+    }
+    &_inner {
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        position: relative;
+        z-index: 2;        
+        @media #{$extra-small-mobile}{
+            flex-direction: column;
+        }
+
+        & .section-title-07{
+            margin-bottom: 40px;
+            @media #{$desktop-device, $tablet-device, $large-mobile}{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &_text-one {
+        width: 290px;
+        max-width: 290px;
+        color: white;
+        font-size: 15px;
+        font-family: $font-02;
+        padding-right: 70px;
+        @media #{$large-mobile}{
+            width: 250px;
+            max-width: 250px;
+            padding-right: 25px;
+        }
+    }
+    &_text-two {
+        width: 200px;
+        max-width: 200px;
+        color: white;
+        font-size: 15px;
+        font-family: $font-02;
+    }
+    &_btn{
+        @media #{$desktop-device, $tablet-device, $large-mobile}{
+            width: 160px;
+            font-size: 14px;
+        }
+        @media #{$extra-small-mobile}{
+            width: 130px;
+            font-size: 14px;
+        }
+        &:hover{
+            background-color: $global-color-11;
+            border-color: $global-color-11;
+            color: white;
+        }
+    }
+}

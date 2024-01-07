@@ -1,0 +1,97 @@
+/*----------------------------------------*/
+/*  03 - 18 Best Service CSS
+/*----------------------------------------*/
+
+// Best Service Image 
+.best-service-image{
+    display: flex;
+    height: 100%;
+    border-radius: 36px;
+    overflow: hidden;
+
+    &__image{
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media #{$tablet-device}{
+            height: 400px;
+        }
+        @media #{$large-mobile}{
+            height: 300px;
+        }
+        @media #{$small-mobile}{
+            height: 250px;
+        }
+        @media #{$extra-small-mobile}{
+            height: 200px;
+        }
+    }
+}
+
+
+.best-service-item{
+    background-color: $white;
+    padding: 45px;
+    box-shadow: 0 0 10px 0 rgba($black, .1);
+    border-radius: 36px;
+    transition: $transition-base;
+    cursor: pointer;
+    @media #{$laptop-device, $desktop-device, $large-mobile}{
+        padding: 25px;
+    }
+    @media #{$tablet-device}{
+        padding: 30px;
+    }
+    &__sub-title{
+        color: $global-color-01;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1;
+        transition: $transition-base;
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile}{
+            font-size: 24px;
+        }
+    }
+    &__title{
+        margin: 15px 0 20px 0;
+        color: $global-color-05;
+        font-family: $font-family-base;
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1;
+        transition: $transition-base;
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile}{
+            font-size: 16px;
+        }
+    }
+    &__desc{
+        color: #7E7E7E;
+        transition: $transition-base;
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile}{
+            font-size: 14px;
+        }
+    }
+
+    &:hover{
+        background-color: $global-color-05;
+
+        & .best-service-item{
+            &__sub-title{
+                color: $white;
+            }
+            &__title{
+                color: $white;
+            }
+            &__desc{
+                color: $white;
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,63 @@
+/*----------------------------------------*/
+/*  02 - 01 Header CSS
+/*----------------------------------------*/
+
+// Header Section 
+.header-section{
+    padding: 25px 0;
+    transition: $transition-base;
+    
+    @media #{$extraBig-device}{
+        padding: 30px 0;
+    }
+}
+
+// Header Transparent 
+.header-transparent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background: none;
+}
+
+// Sticky
+.sticky{
+    position: fixed;
+    background-color: $white;
+    animation: sticky 1s;
+    box-shadow: 0 0 10px rgba($black, .15);
+}
+
+.header-sticky-02{
+    &.sticky{
+        background-color: $secondary;
+    }
+}
+.offcanvas-backdrop{
+    z-index: 99;
+}
+
+// @-webkit-keyframes sticky {
+//     0%{
+//         transform: translateY(-100%)
+//     }
+//     100%{
+//         transform: translateY(0%)
+//     }
+// }
+
+// @keyframes sticky {
+//     0%{
+//         transform: translateY(-100%)
+//     }
+//     100%{
+//         transform: translateY(0%)
+//     }
+// }
+
+@import "./header/01-header";
+@import "./header/02-offcanvas-cart";
+@import "./header/03-search";
+@import "./header/04-offcanvas-menu.scss";

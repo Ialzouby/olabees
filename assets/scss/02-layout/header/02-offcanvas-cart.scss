@@ -1,0 +1,105 @@
+/*----------------------------------------*/
+/*  02 - 01 - 02 Offcanvas Cart CSS
+/*----------------------------------------*/
+
+// Offcanvas Cart
+.offcanvas-cart{
+    z-index: 999;
+    width: 400px;
+    padding: 40px;
+
+    & .offcanvas-header{
+        padding: 0 0 40px;
+    }
+
+    & .btn-close{
+        font-size: 30px;
+        box-shadow: none;
+        line-height: 1;
+    }
+
+    & .offcanvas-body{
+        padding: 0;
+    }
+
+    & .offcanvas-footer{
+        padding-top: 20px;
+    }
+}
+
+// Offcanvas Cart Items
+.offcanvas-cart-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    & li{
+        & + li{
+            margin-top: 30px;
+        }
+    }
+}
+
+// Mini Cart Item
+.mini-cart-item{
+    display: flex;
+    position: relative;
+    padding-right: 20px;
+
+    &__remove{
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        text-align: center;
+    }
+
+    &__thumbnail{
+        flex-shrink: 0;
+
+        & a{
+            display: block;
+        }
+        & img{
+
+        }
+    }
+    &__content{
+        flex-grow: 1;
+    }
+    &__title{
+        font-size: 16px;
+        font-family: $font-family-base;
+        color: $theme-body-font-color;
+    }
+    &__quantity{
+        font-size: 14px;
+    }
+}
+
+// Mini Cart Total
+.mini-cart-totla{
+    & .label{
+        font-weight: 600;
+    }
+    & .value{
+
+    }
+}
+
+// Mini Cart Btton
+.mini-cart-btn{
+    & .btn{
+        text-transform: capitalize;
+
+        @media #{$extraBig-device, $laptop-device}{
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+}

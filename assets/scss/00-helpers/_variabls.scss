@@ -1,0 +1,156 @@
+// Font Family
+$font-01: 'Inter', sans-serif;
+$font-02: 'Montaga', serif;
+$font-03: 'Handlee', cursive;
+$font-04: 'Pacifico', cursive;
+$font-05: 'Allura', cursive;
+$font-06: 'Comfortaa', cursive;
+$font-07: 'Fredericka the Great', cursive;
+$font-08: 'Playfair Display', serif;
+$font-09: 'Yellowtail', cursive;
+
+
+// Responsive Variables
+$extraBig-device: "only screen and (min-width: 1600px)";
+$laptop-device: "only screen and (min-width: 1200px) and (max-width: 1599px)";
+$desktop-device: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$tablet-device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$large-mobile: "only screen and (max-width: 767px)";
+$small-mobile: "only screen and (max-width: 575px)";
+$extra-small-mobile: "only screen and (max-width: 479px)";
+
+
+//===============================
+// Bootstrap Variables Overright
+//===============================
+
+// Color
+$primary: #BC8157;
+$secondary: #212121;
+$success: #4CAF50;
+$danger: #F44336;
+$warning: #FFC107;
+$info: #17A2B8;
+$light: #F8F9FA;
+$dark: #333333;
+$dark-three: #3D240D;
+
+//
+$white: #fff;
+$black: #000;
+$gray: #F9F9F9;
+$gray-100: #F3E7E0;
+
+//
+$theme-selection-bg-color: #BCBCBC;
+$theme-three-color: #858585;
+$theme-body-font-color: #555555;
+$theme-border-color: #dedede;
+$dark-bg: #111111;
+
+//elementor Color
+$global-color-01: #858585;
+$global-color-02: #FFFFFF;
+$global-color-03: #830E0E;
+$global-color-04: #992100;
+$global-color-05: #FF9D87;
+$global-color-06: #C2943A;
+$global-color-07: #8D6443;
+$global-color-08: #FF9457;
+$global-color-09: #FFC887;
+$global-color-10: #93622B;
+$global-color-11: #F8A969;
+$global-color-12: #ee6d2c;
+
+
+
+// theme colors map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+  "info": $info,
+  "light": $light,
+  "dark": $dark,
+  "dark-three": $dark-three,
+  "gray-100": $gray-100,
+
+  "global-color-01": $global-color-01,
+  "global-color-02": $global-color-02,
+  "global-color-03": $global-color-03,
+  "global-color-04": $global-color-04,
+  "global-color-05": $global-color-05,
+  "global-color-06": $global-color-06,
+  "global-color-07": $global-color-07,
+  "global-color-08": $global-color-08,
+  "global-color-09": $global-color-09,
+  "global-color-10": $global-color-10,
+  "global-color-11": $global-color-11,
+  "global-color-12": $global-color-12,
+
+  "dark-two": $dark-bg,
+
+);
+
+
+
+
+
+// Options
+$enable-negative-margins: true;
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.3125,
+  2: $spacer * 0.625,
+  3: $spacer * 0.9375,
+  4: $spacer * 1.25,
+  5: $spacer * 1.625,
+  6: $spacer * 1.875,
+  7: $spacer * 2.1875,
+  8: $spacer * 2.5,
+  9: $spacer * 2.8125,
+  10: $spacer * 3.125,
+  11: $spacer * 3.438,
+  12: $spacer * 3.75,
+  13: $spacer * 4.063,
+  14: $spacer * 4.375,
+  15: $spacer * 4.688,
+  16: $spacer * 5,
+);
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1470px,
+);
+//
+$grid-gutter-width: 30px;
+//
+$gutters: $spacers;
+// Transition
+$transition-base: all 0.3s ease;
+
+// Typography
+$font-family-base: $font-01;
+$font-size-base: 1rem;
+$line-height-base: 1.8;
+//
+$headings-font-family: $font-02;
+$headings-font-weight: 400;
+$headings-line-height: 1.2;

@@ -1,0 +1,191 @@
+/*--
+/*  02.04 - Form CSS
+/*----------------------------------------*/
+
+// Form Label 
+.form-label{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-height: 25px;
+}
+
+// Form Control 
+.form-select,
+.form-control{
+    color: $secondary;
+    border: 1px solid $theme-border-color;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 3px 17px;
+    height: 50px;
+    width: 100%;
+    border-radius: 0;
+    transition: $transition-base;
+
+    &:focus{
+        border-color: $primary;
+        box-shadow: none;
+        color: $secondary;
+    }
+
+    @include placeholder{
+        opacity: 1;
+    }
+}
+
+textarea{
+    &.form-control {
+        height: 140px;
+        padding: 19px 20px 3px;
+    }
+}
+
+
+// Form Check 
+.form-check{
+    display: block;
+    min-height: auto;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    & input[type="checkbox"]{
+        display: none;
+
+        & + label{
+            color: rgba($white, 0.7);
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.8;
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 3px;
+                border: 1px solid #80868d;
+                transition: $transition-base;
+            }
+            &::after{
+                content: "\f00c";
+                color: $headings-color;
+                position: absolute;
+                top: 4px;
+                left: 0;
+                font-size: 14px;
+                font-family: Font Awesome\ 5 Pro;
+                line-height: 18px;
+                width: 18px;
+                height: 18px;
+                border-radius: 3px;
+                transform: scale(0);
+                transition: $transition-base;
+                text-align: center;
+            }
+
+            & span{
+                font-size: 13px;
+                font-weight: 400;
+                color: rgba($white, 0.5);
+            }
+        }
+
+        &:checked{
+            & + label{
+                &::before{
+                    background-color: $secondary;
+                    border-color: $secondary;
+                }
+                &::after{
+                    transform: scale(1);
+                }
+            }
+        }
+        &:hover{
+            & + label{
+                &::before{
+                    border-color: $secondary;
+                }
+            }
+        }
+    }
+
+    & input[type="radio"]{
+        display: none;
+
+        & + label{
+            color: rgba($white, 0.7);
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.8;
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                border: 1px solid #80868d;
+                transition: $transition-base;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: $secondary;
+                transform: scale(0);
+                transition: $transition-base;
+            }
+
+            & span{
+                font-size: 13px;
+                font-weight: 400;
+                color: rgba($white, 0.5);
+            }
+            & strong{
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 1;
+                color: $white;
+            }
+        }
+
+        &:checked{
+            & + label{
+                &::before{
+                    opacity: 0.5;
+                }
+                &::after{
+                    transform: scale(0.55);
+                }
+            }
+        }
+    }
+}
+

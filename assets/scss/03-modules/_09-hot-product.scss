@@ -1,0 +1,267 @@
+/*----------------------------------------*/
+/*  03 - 09 Hot Product CSS
+/*----------------------------------------*/
+
+// Hot Product Section 
+.hot-product-section{
+    background-image: url(../images/hot-product/hot-product-bg.png);
+    background-position: -18% 90%;
+    background-repeat: no-repeat;
+    background-size: 25% auto;
+
+    @media #{$laptop-device, $desktop-device}{
+        background-position: -26% 90%;
+    }
+}
+
+// Hot Product Content Active
+.hot-product-content-active{
+    max-width: 550px;
+}
+
+// Hot Product Content Title
+.hot-product-content-title{
+    font-size: 16px;
+    font-family: $font-family-base;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+// Hot Product Content Item
+.hot-product-content-item{
+    &__title{
+        font-size: 50px;
+        line-height: 1.2;
+
+        @media #{$desktop-device}{
+            font-size: 44px;
+        }
+        @media #{$tablet-device}{
+            font-size: 40px;
+        }
+        @media #{$large-mobile}{
+            font-size: 36px;
+        }
+    }
+    &__heading{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    &__heading-label{
+        color: $secondary;
+        font-family: $headings-font-family;
+        font-size: 24px;
+        line-height: 1;
+    }
+    &__heading-value{
+        color: $global-color-03;
+        font-family: $headings-font-family;
+        font-size: 16px;
+        text-transform: capitalize;
+        line-height: 1;
+    }
+    & p{
+        margin-top: 35px;
+        font-size: 18px;
+        color: $global-color-01;
+
+        @media #{$desktop-device, $small-mobile}{
+            font-size: 16px;
+        }
+    }
+    &__btn{
+        margin-top: 50px;
+        @media #{$tablet-device, $large-mobile}{
+            margin-top: 30px;
+        }
+        @media #{$extraBig-device}{
+            height: 68px;
+            line-height: 66px;
+            font-size: 18px;
+            padding: 0px 45px;
+        }
+    }
+}
+
+// Hot Product Images Active
+.hot-product-images-active{
+    width: calc((100vw - 1440px) / 2 + 100%);
+    min-width: calc((100vw - 1440px) / 2 + 100%);
+
+    @media #{$laptop-device}{
+        width: calc((100vw - 1170px) / 2 + 100%);
+        min-width: calc((100vw - 1170px) / 2 + 100%);
+    }
+    @media #{$desktop-device}{
+        width: calc((100vw - 960px) / 2 + 100%);
+        min-width: calc((100vw - 960px) / 2 + 100%);
+    }
+    @media #{$tablet-device, $large-mobile}{
+        width: 100%;
+        min-width: 100%;
+    }
+
+    & .swiper-button-next,
+    & .swiper-button-prev{
+        background-color: rgb($white, 0.46);
+        color: rgb($black, 0.5);
+        fill: rgb($black, 0.5);
+        font-size: 22px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        bottom: 20px;
+        top: auto;
+        transition: $transition-base;
+
+        @media #{$desktop-device, $small-mobile}{
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        &::after{
+            display: none;
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0;
+        }
+
+        &:hover{
+            background-color: $white;
+            color: $secondary;
+        }
+    }
+
+    & .swiper-button-next{
+        left: 51%;
+        right: auto;
+    }
+    & .swiper-button-prev{
+        left: auto;
+        right: 51%;
+    }
+}
+
+// Hot Product Image Item
+.hot-product-image-item{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 0;
+        z-index: 1;
+        transition: $transition-base;
+    }
+    & img{
+        max-width: none;
+        width: -webkit-calc(100% + 50px);
+        width: calc(100% + 50px);
+        transition: transform 0.35s;
+        transform: translate3d(-40px,0,0);
+    }
+    &:hover{
+        &::before{
+            opacity: 0.4;
+        }
+        & img{
+            transform: translate3d(0,0,0);
+        }
+    }
+}
+
+// Best Item Styles
+.bestitem{
+    overflow: hidden;
+    &_image-one{
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: transparent;
+            background-image: linear-gradient(180deg,#FAEFE3 0%,#FAEFE300 100%);
+            max-width: 717px;
+            width: 100%;
+            height: 100%;
+            max-height: 519px;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            @media #{$desktop-device}{
+                max-height: 350px;
+            }
+            @media #{$tablet-device, $large-mobile}{
+                max-width: 100%;
+            }
+        }
+    }
+    &_image-two {
+        height: 100%;
+        max-height: 660px;
+        width: calc((100vw - 100%) / 2 + 100%);
+        min-width: calc((100vw - 100%) / 2 + 100%);
+        & img {
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            position: relative;    
+        }
+    }
+    &_content-right{
+        padding-left: 40px;
+        @media #{$tablet-device, $large-mobile}{
+            margin-top: 30px;
+            padding-left: 0px;
+        }
+    }
+    &_content-left {
+        padding-right: 40px;
+        @media #{$tablet-device, $large-mobile}{
+            margin-top: 30px;
+            padding-right: 0px;
+        }
+    }
+    & .btn-arrow {
+        margin-top: 60px;
+        @media #{$tablet-device}{
+            margin-top: 40px;
+        }
+        @media #{$large-mobile}{
+            margin-top: 20px;
+        }
+    }
+    &-bg{
+        background-repeat: no-repeat;
+        background-position: center right;
+        @media #{$desktop-device}{
+            background-size: 30%;
+        }
+        @media #{$tablet-device}{
+            background-size: 45%;
+        }
+        @media #{$large-mobile}{
+            background-size: 50%;
+        }
+    }
+}
+
+
+
+

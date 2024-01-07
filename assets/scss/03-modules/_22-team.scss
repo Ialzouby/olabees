@@ -1,0 +1,310 @@
+/*----------------------------------------*/
+/*  03 - 22 Team CSS
+/*----------------------------------------*/
+.team{
+    &-wrapper {
+        background-color: #F9F9F9;
+        border-radius: 36px;
+        overflow: hidden;
+        position: relative;
+        @media #{$tablet-device} {
+            border-radius: 30px;
+        }
+    }
+    &-thumb {
+        & img {
+            width: 100%;
+        }
+        position: relative;
+    }
+    &-social {
+        display: flex;
+        justify-content: center;
+        padding: 35px 0;
+        background-color: rgba(255,255,255,0.0);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transition: .3s;
+        & li {
+            margin-right: 10px;
+            transform: translateY(20px);
+            position: relative;
+            opacity: 0;
+            &:last-child {
+                margin-right: 0;
+            }
+            & a {
+                color: $secondary;
+                background-color: transparent;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                &:hover{
+                    background-color: $global-color-05;
+                }
+            }
+        }
+    }
+    &-content{
+        padding: 30px 10px;
+        text-align: center;
+        @media #{$tablet-device, $large-mobile} {
+            padding: 20px 10px;
+        }
+    }
+    &-name{
+        font-family: $font-01;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1;
+        display: block;
+        color: $secondary;
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+    &-designation{
+        font-size: 18px;
+        color: $global-color-01;
+        font-weight: 500;
+        line-height: 1;
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+    }
+}
+.team-wrapper{
+    &:hover{
+        & .team-social {
+            background-color: rgba(255,255,255,0.7);
+            transition: .3s;
+    
+            & li {
+                transform: translateY(0px);
+                opacity: 1;
+                &:nth-child(2n+1){
+                    transition-duration: .2s;
+                }
+                &:nth-child(2n+2){
+                    transition-duration: .5s;
+                }
+                &:nth-child(2n+3){
+                    transition-duration: .6s;
+                }
+                &:nth-child(2n+4){
+                    transition-duration: .7s;
+                }
+            }
+        }
+    }
+}
+.team-2{
+    &-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 270px;
+        margin: 40px auto 0;
+        @media #{$tablet-device} {
+            border-radius: 30px;
+        }
+        @media #{$large-mobile} {
+            margin: 20px auto 0;
+        }
+    }
+    &-thumb {
+        & img {
+            width: 100%;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+        position: relative;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 9;
+            background-color: $primary;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: .4s;
+        }
+        &:hover{
+            &::before{
+                opacity: 0.5;
+                visibility: visible;
+                transition: .4s;
+            }
+        }
+    }
+    &-social {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        transition: .3s;
+        margin-top: 20px;
+        & li {
+            margin-right: 20px;
+            position: relative;
+            &:last-child {
+                margin-right: 0;
+            }
+            & a {
+                color: #c9c9c9;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                font-size: 20px;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+    &-content{
+        padding: 30px 10px 10px;
+        text-align: center;
+        @media #{$tablet-device, $large-mobile} {
+            padding: 20px 10px 0;
+        }
+    }
+    &-name{
+        font-family: $font-02;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 5px;
+        line-height: 1.2;
+        display: block;
+        color: $secondary;
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+    &-designation{
+        font-size: 12px;
+        color: $primary;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1;
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+    }
+}
+.team-3{
+    &-wrapper {
+        box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+    }
+    &-thumb {
+        position: relative;
+        overflow: hidden;
+        & img{
+            width: 100%;
+        }
+        &::before {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 9;
+            background-color: $primary;
+            top: 0;
+            left: 0;
+            content: "";
+            opacity: 0;
+            visibility: hidden;
+            transition: .4s;
+        }
+        &:hover{
+            &::before{
+                opacity: 0.5;
+                visibility: visible;
+                transition: .4s;
+            }
+        }
+    }
+    &-social {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        transition: .3s;
+        margin-top: 20px;
+        & li {
+            margin-right: 20px;
+            position: relative;
+            &:last-child {
+                margin-right: 0;
+            }
+            & a {
+                color: $primary;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                font-size: 16px;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    &-content{
+        padding: 30px;        
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            padding: 30px 20px;   
+        }
+    }
+    &-head{
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $theme-border-color;
+        @media #{$tablet-device, $large-mobile} {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+    }
+    &-name{
+        font-family: $font-01;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.2;
+        display: block;
+        color: $secondary;
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            font-size: 18px;
+        }
+    }
+    &-designation{
+        font-size: 12px;
+        color: $primary;
+        font-weight: 600;
+        line-height: 1;
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            font-size: 11px;
+        }
+    }
+    &-text{
+        color: $global-color-01;
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            font-size: 14px;
+        }
+    }
+}

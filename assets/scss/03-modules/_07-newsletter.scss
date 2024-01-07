@@ -1,0 +1,246 @@
+/*----------------------------------------*/
+/*  03 - 07 Newsletter CSS
+/*----------------------------------------*/
+// Newsletter Section 
+.newsletter-section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @media #{$large-mobile}{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+// Newsletter
+.newsletter{
+    margin: 0 auto;
+    max-width: 550px;
+    
+    @media #{$extraBig-device}{
+        max-width: 770px;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        margin-top: -5px;
+        font-size: 32px;
+        
+        @media #{$extraBig-device}{
+            font-size: 36px;
+        }
+        @media #{$large-mobile}{
+            font-size: 24px;
+        }
+    }
+    &__form{
+        margin-top: 40px;
+        position: relative;
+
+        @media #{$extraBig-device}{
+            margin-top: 50px;
+        }
+    }
+    &__field{
+        padding: 0 30px;
+        padding-right: 155px;
+        color: $secondary;
+        font-size: 16px;
+        height: 58px;
+        border-style: solid;
+        border: 0;
+        width: 100%;
+        background-color: $white;
+
+        @media #{$extraBig-device}{
+            height: 68px;
+        }
+        @media #{$large-mobile}{
+            font-size: 14px;
+            padding-right: 130px;
+        }
+
+        @include placeholder{
+            opacity: 1;
+            color: $secondary;
+        }
+    }
+    &__btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: none;
+        border: 0;
+        height: 58px;
+        padding: 0 30px;
+        font-size: 22px;
+        font-family: $headings-font-family;
+        color: $secondary;
+        transition: $transition-base;
+
+        @media #{$extraBig-device}{
+            height: 68px;
+        }
+        @media #{$large-mobile}{
+            font-size: 18px;
+        }
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+// Newsletter
+.newsletter-two{
+    margin: 0 auto;
+    max-width: 900px;
+    margin-top: -70px;
+    padding: 35px 35px 0;
+    background-color: white;
+    position: relative;
+    z-index: 9;
+
+    &__form{
+        position: relative;
+        border: 1px solid #dedede;
+    }
+    &__field{
+        padding: 0 30px;
+        padding-right: 155px;
+        color: $secondary;
+        font-size: 16px;
+        height: 58px;
+        border-style: solid;
+        border: 0;
+        width: 100%;
+        background-color: $white;
+
+        @media #{$extraBig-device}{
+            height: 68px;
+        }
+        @media #{$large-mobile}{
+            font-size: 14px;
+            padding-right: 130px;
+        }
+
+        @include placeholder{
+            opacity: 1;
+            color: $secondary;
+        }
+    }
+    &__btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: none;
+        border: 0;
+        height: 58px;
+        padding: 0 30px;
+        font-size: 16px;
+        font-family: $font-01;
+        color: $secondary;
+        transition: $transition-base;
+        font-weight: 700;
+
+        @media #{$extraBig-device}{
+            height: 68px;
+        }
+        @media #{$large-mobile}{
+            font-size: 18px;
+        }
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+// Newsletter
+.newsletter-three{
+    padding: 140px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media #{$desktop-device}{
+        padding: 100px 0;
+    }
+    @media #{$tablet-device}{
+        padding: 80px 0;
+    }
+    @media #{$large-mobile}{
+        padding: 60px 0;
+    }
+    & .section-title-07{
+        max-width: 400px;
+        width: 100%;
+    }
+    & .section-title-07__title{
+        font-size: 40px;
+        @media #{$tablet-device}{
+            font-size: 36px;
+        }
+        @media #{$large-mobile}{
+            font-size: 30px;
+        }
+    }
+    &__form{
+        position: relative;
+        border: 1px solid rgba(222, 222, 222, 0.6);
+        max-width: 600px;
+        width: 100%;
+        margin-top: 70px;
+        @media #{$tablet-device}{
+            margin-top: 60px;
+        }
+        @media #{$large-mobile}{
+            margin-top: 40px;
+        }
+    }
+    &__field{
+        padding: 0 30px;
+        padding-right: 80px;
+        color: #ffffff;
+        font-size: 16px;
+        font-family: $font-02;
+        height: 58px;
+        border: 0;
+        width: 100%;
+        background-color: transparent;
+
+        @media #{$extraBig-device}{
+            height: 68px;
+        }
+        @media #{$large-mobile}{
+            font-size: 14px;
+            padding-right: 80px;
+        }
+
+        @include placeholder{
+            opacity: 1;
+            color: #ffffff;
+        }
+    }
+    &__btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: none;
+        border: 0;
+        height: 58px;
+        padding: 0 30px;
+        color: #dedede;
+        transition: $transition-base;
+
+        @media #{$extraBig-device}{
+            height: 68px;
+        }
+        @media #{$large-mobile}{
+            font-size: 18px;
+        }
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}

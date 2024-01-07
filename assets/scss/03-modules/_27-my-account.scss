@@ -1,0 +1,55 @@
+/*----------------------------------------*/
+/*  03 - 27 My-Account CSS
+/*----------------------------------------*/
+/* My Account Tab List */
+.my-account-tab-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #E5E5E5;
+
+    li + li {
+        border-top: 1px solid #E5E5E5;
+    }
+    & li {
+        & a{
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            text-transform: capitalize;
+            gap: 8px;
+            &.active {
+                color: #fff;
+                background-color: $primary;
+            }
+        }
+    }
+}
+.alert-light {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+}
+.myaccount-content{
+    &.address{
+        & .title {
+            font-size: 24px;
+            font-family: $font-01;
+            font-weight: 600;
+
+            & .edit-link{
+                font-size: 14px;
+                text-decoration: underline;
+                font-weight: 400;
+                margin-left: 3px;
+            }
+        }
+        & .name{
+            font-size: 18px;
+            font-family: $font-01;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    }
+}

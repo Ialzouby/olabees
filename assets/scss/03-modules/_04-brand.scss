@@ -1,0 +1,70 @@
+/*----------------------------------------*/
+/*  03 - 04 Brand CSS
+/*----------------------------------------*/
+
+// Brand Section
+.brand-section{
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media #{$extraBig-device}{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+// Brand Item 
+.brand-item {
+    padding: 20px;
+    text-align: center;
+
+    & img {
+        width: 100px;
+        transition: $transition-base;
+    }
+
+    &:hover {
+        & img {
+            transform: scale(1.1);
+        }
+    }
+}
+// Brand Two Active
+.brand-active-two {
+    .swiper-wrapper{
+        align-items: stretch;
+    }
+    .swiper-slide {
+        height: 130px;
+        padding: 0px 25px;
+        @media #{$desktop-device, $tablet-device, $large-mobile}{
+            padding: 0 10px;
+        }
+    }
+}
+// Brand Item Two
+.brand-item-two {
+    text-align: center;
+    border: 1px solid #BCBCBC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    & img {
+        max-width: 100%;
+        width: 50%;
+        height: auto;
+        max-height: 80px;
+        margin: 24px 0;
+        flex-grow: 1;
+        object-fit: contain;
+        transition: $transition-base;
+    }
+
+    &:hover{
+        & img {
+            transform: scale(1.1);
+        }
+    }
+}
+

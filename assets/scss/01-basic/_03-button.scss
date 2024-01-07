@@ -1,0 +1,475 @@
+/*--
+/*  02.03 - Button CSS
+/*----------------------------------------*/
+.btn-margin{
+	margin-top: 40px;
+}
+// Button
+.btn {
+	font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+	overflow: hidden;
+	background-color: transparent;	
+	height: 56px;
+	line-height: 56px;
+	padding: 0 36px;
+	border: 0px;
+	box-shadow: none;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	white-space: nowrap;
+	border-radius: 0;
+
+	&:focus,
+	&:active:focus{
+		box-shadow: none;
+	}
+	
+	// Responsive
+	@media #{$desktop-device, $tablet-device} {
+		height: 50px;
+		line-height: 50px;
+		padding: 0px 30px;
+	}
+	@media #{$large-mobile} {
+		font-size: 14px;
+		height: 45px;
+		line-height: 45px;
+		padding: 0px 20px;		
+	}
+}
+.btn-arrow {
+	font-size: 37px;
+	font-family: $font-01;
+	height: 52px;
+	width: 120px;
+	font-weight: 400;
+	border: 1px solid;
+	border-radius: 35px;
+	background-color: transparent;
+	transition: .4s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media #{$desktop-device, $tablet-device, $large-mobile}{
+		height: 40px;
+		width: 80px;
+		font-size: 30px;
+	}
+	@media #{$small-mobile}{
+		height: 30px;
+		width: 60px;
+		font-size: 24px;
+	}
+}
+// Button Outline 
+[class*="btn-outline-"]{
+	border: 1px solid;
+	line-height: 54px;
+
+	@media #{$desktop-device, $tablet-device} {
+		line-height: 48px;
+	}
+	@media #{$large-mobile} {
+		line-height: 43px;
+	}
+}
+// Button Colors
+.btn-primary {
+	background-color: $primary;
+	border-color: $primary;
+	color: $white;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $primary;
+		border-color: $primary;
+		color: $white;
+	}
+}
+.btn-secondary {
+	background-color: $secondary;
+	border-color: $secondary;
+	color: $white;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $secondary;
+		border-color: $secondary;
+		color: $white;
+	}
+}
+.btn-success {
+	background-color: $success;
+	border-color: $success;
+	color: $dark;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $success;
+		border-color: $success;
+		color: $dark;
+	}
+}
+.btn-danger {
+	background-color: $danger;
+	border-color: $danger;
+	color: $white;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $danger;
+		border-color: $danger;
+		color: $white;
+	}
+}
+.btn-warning {
+	background-color: $warning;
+	border-color: $warning;
+	color: $dark;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $warning;
+		border-color: $warning;
+		color: $dark;	
+	}
+}
+.btn-info {
+	background-color: $info;
+	border-color: $info;
+	color: $white;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $info;
+		border-color: $info;
+		color: $white;
+	}
+}
+.btn-light {
+	background-color: $light;
+	border-color: $light;
+	color: $dark;
+	
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $light;
+		border-color: $light;
+		color: $dark;
+	}
+}
+.btn-dark {
+	background-color: $dark;
+	border-color: $dark;
+	color: $white;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $dark;
+		border-color: $dark;
+		color: $white;
+	}
+}
+.btn-white {
+	background-color: $white;
+	border-color: $white;
+	color: $primary;
+	box-shadow: 0 6px 25px rgba($black,.1);
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $white;
+		border-color: $white;
+		color: $primary;
+		box-shadow: 0 6px 25px rgba($black,.1);
+	}
+}
+.btn-black {
+	background-color: $black;
+	border-color: $black;
+	color: $white;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $black;
+		border-color: $black;
+		color: $white;
+	}
+}
+.btn-theme-color-01 {
+	background-color: $global-color-04;
+	border-color: $global-color-04;
+	color: $white;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $global-color-04;
+		border-color: $global-color-04;
+		color: $white;
+	}
+}
+
+
+// Button Outline Colors
+.btn-outline-primary {
+	border-color: $primary;
+	color: $primary;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $primary;
+		color: $white;
+	}
+}
+.btn-outline-secondary {
+	border-color: $secondary;
+	color: $secondary;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $secondary;
+		color: $white;
+	}
+}
+.btn-outline-success {
+	border-color: $success;
+	color: $success;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $success;
+		color: $dark;
+	}
+}
+.btn-outline-danger {
+	border-color: $danger;
+	color: $danger;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $danger;
+		color: $white;
+	}
+}
+.btn-outline-warning {
+	border-color: $warning;
+	color: $warning;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $warning;
+		color: $dark;	
+	}
+}
+.btn-outline-info {
+	border-color: $info;
+	color: $info;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $info;
+		color: $white;
+	}
+}
+.btn-outline-light {
+	border-color: $light;
+	color: $light;
+	
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $light;
+		color: $dark;
+	}
+}
+.btn-outline-dark {
+	border-color: $dark;
+	color: $dark;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $dark;
+		color: $white;
+	}
+}
+.btn-outline-white {
+	border-color: $white;
+	color: $white;
+	box-shadow: 0 6px 25px rgba($black,.1);
+
+	
+	&:hover{
+		background-color: $white;
+		color: $primary;
+		box-shadow: 0 6px 25px rgba($black,.1);
+	}
+}
+.btn-outline-black {
+	border-color: $black;
+	color: $black;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $black;
+		color: $white;
+	}
+}
+.btn-outline-theme-color-01 {
+	border-color: $global-color-04;
+	color: $global-color-04;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $global-color-04;
+		color: $white;
+	}
+}
+.btn-outline-theme-color-02 {
+	border-color: $dark;
+	color: $dark;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: $global-color-06;
+		color: $white;
+	}
+}
+.arrow-btn-outline-color-01{
+	border-color: rgb(64, 50, 47);
+	color: rgb(64, 50, 47);
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: rgb(64, 50, 47);
+		color: $white;
+		transition: .4s;
+	}
+}
+.arrow-btn-outline-color-02{
+	border-color: $global-color-10;
+	color: $global-color-10;
+
+	&:focus,
+	&:active,
+	&:hover{
+		background-color: #EE6D2C;
+		border-color: #EE6D2C;
+		color: $white;
+		transition: .4s;
+	}
+}
+
+
+// Button Hover 
+.btn-hover-primary {
+	&:hover {
+		background-color: $primary;
+		border-color: $primary;
+		color: $white;
+	}
+}
+.btn-hover-secondary {
+	&:hover {
+		background-color: $secondary;
+		border-color: $secondary;
+		color: $white;
+	}
+}
+.btn-hover-success {
+	&:hover {
+		background-color: $success;
+		border-color: $success;
+		color: $dark;
+	}
+}
+.btn-hover-danger {
+	&:hover {
+		background-color: $danger;
+		border-color: $danger;
+		color: $white;
+
+		&::before{
+			border-color: $white;
+		}
+	}
+}
+.btn-hover-warning {
+	&:hover {
+		background-color: $warning;
+		border-color: $warning;
+		color: $dark;
+	}
+}
+.btn-hover-info {
+	&:hover {
+		background-color: $info;
+		border-color: $info;
+		color: $white;
+	}
+}
+.btn-hover-light {
+	&:hover {
+		background-color: $light;
+		border-color: $light;
+		color: $dark;
+	}
+}
+.btn-hover-dark {
+	&:hover {
+		background-color: $dark;
+		border-color: $dark;
+		color: $white;
+	}
+}
+.btn-hover-white {
+	&:hover {
+		background-color: $white;
+		border-color: $white;
+		color: $primary;
+		box-shadow: 0 6px 25px rgba($black,.1);
+	}
+}
+.btn-hover-black {
+	&:hover {
+		background-color: $black;
+		border-color: $black;
+		color: $white;
+	}
+}
+.btn-hover-theme-color-01 {
+	&:hover {
+		background-color: $global-color-04;
+		border-color: $global-color-04;
+		color: $white;
+	}
+}
+
+
+
+

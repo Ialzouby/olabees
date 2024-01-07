@@ -1,0 +1,67 @@
+/*----------------------------------------*/
+/*  02 - 02 - 02 Footer Copyright CSS
+/*----------------------------------------*/
+
+// Footer Copyright
+.footer-copyright{
+    background-color: #F4F4F4;
+}
+
+// Footer Copyright Text 
+.footer-copyright-text {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    & a {
+        text-decoration: underline;
+        color: $secondary;
+        &:hover{
+            color: $primary;
+        }
+    }
+    & i {
+        color: $primary;
+    }
+}
+
+//Footer Payment
+.footer-payment{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media #{$large-mobile}{
+        justify-content: center;
+    }
+    & li {
+        color: #d8d8d8;
+        margin-right: 18px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+
+// Dark Footer 
+.dark-footer{
+    // Footer Copyright
+    .footer-copyright{
+        background-color: $secondary;
+        padding: 40px 0 20px;
+    }
+    // Footer Copyright Text 
+    .footer-copyright-text {
+        color: $global-color-01;
+        text-align: start;
+        @media #{$large-mobile}{
+            text-align: center;
+        }
+        & a {
+            text-decoration: underline;
+            color: $primary;
+        }
+    }
+}

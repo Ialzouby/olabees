@@ -1,0 +1,60 @@
+/*----------------------------------------*/
+/*  03 - 20 Shipping CSS
+/*----------------------------------------*/
+.shipping-section{
+    margin-top: 60px;
+}
+.shipping{
+    display: flex;
+    align-items: center;
+
+    &_thumb{
+        margin-right: 25px;
+        color: $secondary;
+        transition: .4s;
+        font-size: 60px;
+        line-height: 1;
+        @media #{$large-mobile}{
+            margin-right: 15px;
+            font-size: 50px;
+        }
+        & svg {
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            vertical-align: middle;
+            stroke: currentColor;
+            fill: currentColor;
+        }
+    }
+    &_content{
+        display: flex;
+        flex-direction: column;
+        &__title{
+            font-size: 22px;
+            font-weight: 600;
+            color: $secondary;
+            margin-bottom: 12px;
+            text-transform: capitalize;
+            line-height: 1;
+            @media #{$large-mobile, $tablet-device}{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        &__text {
+            font-size: 16px;
+            color: $theme-three-color;
+            line-height: 1;
+            @media #{$large-mobile, $tablet-device}{
+                font-size: 15px;
+            }
+        }
+    }
+    &:hover{
+        & .shipping_thumb{
+            color: $global-color-06;
+            transition: .4s;
+        }
+    }
+}

@@ -1,0 +1,196 @@
+/*----------------------------------------*/
+/*  02 - 02 - 01 Footer Widget CSS
+/*----------------------------------------*/
+
+// Footer Widget  Section
+.footer-widget-section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @media #{$large-mobile}{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+// Footer Widget 
+.footer-widget{
+    &__logo{
+        margin: 40px 0 10px;
+
+        @media #{$large-mobile}{
+            margin-top: 0;
+        }
+
+        & img{
+            @media #{$tablet-device, $small-mobile}{
+                width: 160px;
+            }
+        }
+    }
+    &__social{
+        display: flex;
+        gap: 0 30px;
+
+        @media #{$tablet-device}{
+            gap: 0 20px;
+        }
+
+        & a{
+            color: $secondary;
+            font-size: 20px;
+
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+    &__title{
+        font-size: 18px;
+        text-transform: uppercase;
+        line-height: 2;
+        margin-bottom: 10px;
+
+        @media #{$tablet-device, $small-mobile}{
+            font-size: 16px;
+        }
+    }
+    &__title-02{
+        font-size: 18px;
+        font-family: $font-family-base;
+        text-transform: uppercase;
+        line-height: 2;
+        margin-bottom: 10px;
+
+        @media #{$tablet-device, $small-mobile}{
+            font-size: 16px;
+        }
+    }
+    &__link{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        & li{
+            & + li{
+                padding-top: 12px;
+            }
+            & a{
+                font-size: 14px;
+                color: $global-color-01;
+                display: block;
+                white-space: nowrap;
+
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    &__newsletter{
+        max-width: 452px;
+        @media #{$large-mobile}{
+            max-width: 100%;
+        }
+    }
+    &__fild{
+        width: 100%;
+        height: 48px;
+        border: 1px solid $theme-border-color;
+        padding: 0 25px;
+        padding-right: 120px;
+        font-size: 14px;
+        transition: $transition-base;
+
+        &:focus{
+            border-color: $secondary;
+        }
+    }
+    &__btn{
+        height: 48px;
+        line-height: 48px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+// Dark Footer
+.dark-footer{
+    background-color: $secondary;
+    & .footer-widget__logo{
+        & .logo-dark{
+            display: none;
+        }
+        & .logo-white {
+            display: block !important;
+        }
+    }
+    .footer-widget{
+        &__social{
+            & a{
+                color: white;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+        &__title{
+            color: white;
+        }
+        &__title-02{
+            color: white;
+        }
+        &__link{
+            & li{
+                & a{
+                    color: $theme-three-color;
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+        &__fild{
+            border: 1px solid #a9a9a9;
+            color: #a9a9a9;
+            background-color: transparent;
+            &:focus{
+                border-color: white;
+            }
+        }
+        &__btn{
+            background-color: white;
+            color: $secondary;
+            &:hover{
+                background-color: $primary;
+                color: white;
+            }
+        }
+    }
+    & .footer-copyright-two{
+        padding-top: 20px !important;
+    }
+
+    &.bg-dark-four{
+        background-color: #000000;
+        & .footer-payment{
+            li {
+                margin-right: 30px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            & svg {
+                opacity: .5;
+            }
+        }
+        & .footer-copyright-two {
+            background-color: #000000;
+        }
+    }
+}
+
+

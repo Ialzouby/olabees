@@ -1,0 +1,202 @@
+/*----------------------------------------*/
+/*  01 - 01 Template default CSS
+/*----------------------------------------*/
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+
+/* Common Style */
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: $font-family-base, Arial, Helvetica, sans-serif;
+	font-size: $font-size-base;
+	font-weight: 400;
+	font-style: normal;
+	line-height: $line-height-base;
+	position: relative;
+	visibility: visible;
+	overflow-x: hidden;
+	color: $theme-body-font-color;
+	background-color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+	margin-bottom: 0;
+	color: $secondary;
+}
+h1 {
+	font-size: 36px;
+}
+h2 {
+    font-size: 32px;
+}
+h3 {
+    font-size: 28px;
+}
+h4 {	
+    font-size: 24px;
+}
+h5 {
+    font-size: 22px;
+}
+h6 {
+    font-size: 20px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: inherit;
+	margin: 0;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+a, button {
+	line-height: inherit;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
+}
+
+a, button, img, input {
+	transition: $transition-base;
+}
+
+*:focus {
+	outline: none;
+}
+
+a:focus {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: $primary;
+}
+
+button, 
+input[type="submit"] {
+	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+input, 
+textarea {
+	@include placeholder {
+		opacity: 1;
+	}
+}
+
+ul {
+	padding-left: 0;
+	li{
+		list-style: none;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+hr {
+	border-top-width: 2px;
+}
+
+
+
+
+/* Form Field Input */
+input.form-field:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]) {
+	font-size: 14px;
+	width: 100%;
+	height: 54px;
+	padding: 10px 15px;
+	border: 1px solid #E5E5E5;
+	background-color: #fff;
+}
+input.form-field:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range])::-webkit-input-placeholder {
+	color: rgba(51, 51, 51, 0.7);
+}
+input.form-field:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]):-moz-placeholder {
+	color: rgba(51, 51, 51, 0.7);
+}
+input.form-field:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range])::-moz-placeholder {
+	color: rgba(51, 51, 51, 0.7);
+}
+input.form-field:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]):-ms-input-placeholder {
+	color: rgba(51, 51, 51, 0.7);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
+	input.form-field:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]) {
+	  height: 52px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	input.form-field:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]) {
+	  height: 44px;
+	}
+}
+input.form-field:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]):focus {
+	border-color: #C7A17A;
+}
+  
+/* Form Field Textarea */
+textarea.form-field {
+	font-size: 14px;
+	width: 100%;
+	height: 140px;
+	padding: 10px 15px;
+	border: 1px solid #E5E5E5;
+	background-color: #fff;
+}
+textarea.form-field::-webkit-input-placeholder {
+	color: rgba(51, 51, 51, 0.7);
+}
+textarea.form-field:-moz-placeholder {
+	color: rgba(51, 51, 51, 0.7);
+}
+textarea.form-field::-moz-placeholder {
+	color: rgba(51, 51, 51, 0.7);
+}
+textarea.form-field:-ms-input-placeholder {
+	color: rgba(51, 51, 51, 0.7);
+}
+textarea.form-field:focus {
+	border-color: #C7A17A;
+}
+
