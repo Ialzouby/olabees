@@ -3006,6 +3006,7 @@ textarea.form-control {
 .footer-widget-section {
   padding-top: 80px;
   padding-bottom: 80px;
+  clear: both; /* Clear floats */
 }
 @media only screen and (max-width: 767px) {
   .footer-widget-section {
