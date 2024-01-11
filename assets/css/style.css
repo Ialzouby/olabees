@@ -13110,14 +13110,23 @@ textarea.form-control {
 /*----------------------------------------*/
 /*  03 - 24 Breadcrumb CSS
 /*----------------------------------------*/
-.breadcrumb {
-  padding: 190px 0 100px;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 0;
+.breadcrumb-background {
+  background-image: url('assets/images/OlaBees1.png'); /* Directly set the background image */
+  background-repeat: no-repeat; /* No repetition of the background image */
+  background-position: center; /* Center the background image */
+  background-size: cover; /* Cover the entire area of the element */
 }
+
+.breadcrumb {
+  padding: 190px 0 100px; /* Top & Bottom padding with zero Left & Right */
+  position: relative; /* Keep it relative for positioning elements inside it, if any */
+  margin-bottom: 0; /* No margin at the bottom */
+  /* Include other styling properties for .breadcrumb here */
+}
+
+
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .breadcrumb {
     padding: 140px 0 80px;
@@ -15553,4 +15562,41 @@ textarea.form-control {
     margin-left: 0px;
     min-width: 100%;
   }
+}
+
+
+.main-top-section {
+  overflow: hidden;
+}
+
+.main-single-slider {
+  /* Assuming the original slider has some animation or specific styling */
+  /* Replace with your existing slider styles */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px; /* Adjust height as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-slider-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.main-slider-title {
+  /* Styling for the title, adjust as needed */
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.main-slider-shape {
+  /* Styling for the shape (SVG) link */
+  display: inline-block;
+  margin-top: 20px;
+  color: white; /* Adjust the color as needed */
 }
